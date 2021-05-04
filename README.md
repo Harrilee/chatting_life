@@ -1,6 +1,6 @@
 # Chatting Life – Information Visualization Course Project
 
-@Harrilee | hl3794@nyu.edu
+@Harrilee | harrylee@nyu.edu
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
