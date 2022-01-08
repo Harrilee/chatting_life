@@ -260,6 +260,16 @@ function App() {
             }
         })
 
+        function quick_filter(days){
+            let days_all = Object.keys(message_tree)
+            days_all.sort((a,b)=>{
+                let a_unix = moment(a,"YYYY-MM-DD").unix()
+                let b_unix = moment(b,"YYYY-MM-DD").unix()
+                return a_unix-b_unix
+            })
+            filter_setDateRange(days_all.slice(days_all.length-days))
+
+        }
 
         return (
             <>
@@ -372,6 +382,12 @@ function App() {
                 </svg>
                 <ToolTip attr={selectedAttr}/>
                 <TootipArea attr={selectedAttr} xScale={xScale} yScale={yScale}/>
+                <div class={'quick_filter'}>
+                    <a onClick={()=>{quick_filter(7)}}>Last 7 days</a>
+                    <a onClick={()=>{quick_filter(14)}}>Last 14 days</a>
+                    <a onClick={()=>{quick_filter(28)}}>Last Month</a>
+                    <a onClick={()=>{quick_filter(364)}}>Last Year</a>
+                </div>
             </>
         )
     }

@@ -87,3 +87,11 @@
     box-shadow: 2px 2px 2px grey;
     border-radius: 5px;
 }
+.quick_filter{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.quick_filter a{
+    margin-right: 1em;
+}
